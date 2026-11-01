@@ -18,14 +18,31 @@ A lightweight, command-line OSINT tool written in Python to check if an email ad
    pip install -r requirements.txt
 
 3. Make the script executable and install it to your system path.
-
-   **For Termux (Android):**
-   Use the `$PREFIX` environment variable to place the executable in Termux's local bin directory.
+   First, grant execution permissions to the script:
    ```bash
    chmod +x kchecker.py
+   ```
+   For Termux (Android):
+   Copy the executable to Termux's local bin directory.
+   ```bash
    cp kchecker.py $PREFIX/bin/kchecker
-   
-   **For Debian-based Linux (Kali, Ubuntu) and macOS:**
-   chmod +x kchecker.py
-   sudo cp kchecker.py /usr/local/bin/kchecker	
+   ```
+   For Debian-based Linux (Kali, Ubuntu) and macOS:
+   Copy the executable to the system's local binary directory.
+   ```bash
+   sudo cp kchecker.py /usr/local/bin/kchecker
+   ```
 
+Usage
+
+Once installed, run the tool from anywhere in your terminal by passing the target email address as an argument:
+
+```bash
+kchecker target@example.com
+```
+
+Disclaimer
+
+This tool is intended for educational purposes and authorized OSINT research only.
+
+```
